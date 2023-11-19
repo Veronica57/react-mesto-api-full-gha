@@ -2,7 +2,7 @@
 # Проект Mesto фронтенд + бэкенд
 ## Ссылка на проект
 
-https://github.com/Veronica57/express-mesto-gha
+https://github.com/Veronica57/express-mesto-gha 
 
 ## Директории
 
