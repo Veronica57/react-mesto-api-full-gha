@@ -1,5 +1,8 @@
 const allowedCors = [
-  'http://158.160.128.102',
+  'http://veronica-frontend-project.nomoredomainsmonster.ru',
+  'https://veronica-frontend-project.nomoredomainsmonster.ru',
+  'http://veronica-api.nomoredomainsmonster.ru',
+  'https://veronica-api.nomoredomainsmonster.ru',
   'https://localhost:3000',
   'http://localhost:3000',
 ];

@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://auth.nomoreparties.co';
+export const BASE_URL = 'https://veronica-api.nomoredomainsmonster.ru';
 
 const checkResponse = (res) => {
     return res.ok ? res.json() : Promise.reject(`Код ошибки ${res.status}`);
