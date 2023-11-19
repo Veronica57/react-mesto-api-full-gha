@@ -43,7 +43,6 @@ class Api {
             body: JSON.stringify({
                 avatar: data.avatar,
             }),
-            credentials: 'include',
         }).then((res)=>this._checkResponse(res));
     }
 
@@ -70,7 +69,6 @@ class Api {
                 name: data.imagename,
                 link: data.imagelink,
             }),
-            credentials: 'include',
         }).then((res) => this._checkResponse(res))
     }
 
@@ -109,7 +107,7 @@ class Api {
 }
 
 const api = new Api({
-    baseUrl: "https://veronica-api.nomoredomainsmonster.ru",
+    baseUrl: "https://api.veronica.nomoredomainsmonster.ru",
 });
 
 export default api;
