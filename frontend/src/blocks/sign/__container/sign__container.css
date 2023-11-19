@@ -1,0 +1,15 @@
+.sign__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 358px;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100%;
+}
+
+@media (max-width: 600px) {
+    .sign__container {
+        max-width: 260px;
+    }
+}
