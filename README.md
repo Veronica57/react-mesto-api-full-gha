@@ -9,9 +9,9 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.130.133
+IP 158.160.130.133
 
-Frontend https://domainname.veronica.nomoredomainsmonster.ru
+Frontend https://veronica.nomoredomainsmonster.ru
 
-Backend https://api.domainname.veronica.nomoredomainsmonster.ru
+Backend https://veronica.nomoredomainsmonster.ru
 
