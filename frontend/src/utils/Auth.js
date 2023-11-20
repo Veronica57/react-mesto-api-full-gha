@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://api.veronica.nomoredomainsmonster.ru';
+export const BASE_URL = 'http://api.veronica.nomoredomainsmonster.ru';
 
 const checkResponse = (res) => {
     return res.ok ? res.json() : Promise.reject(`Код ошибки ${res.status}`);

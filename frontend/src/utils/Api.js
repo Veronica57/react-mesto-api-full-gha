@@ -107,7 +107,7 @@ class Api {
 }
 
 const api = new Api({
-    baseUrl: "https://api.veronica.nomoredomainsmonster.ru",
+    baseUrl: "http://api.veronica.nomoredomainsmonster.ru",
 });
 
 export default api;
