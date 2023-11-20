@@ -13,5 +13,5 @@ IP 158.160.130.133
 
 Frontend https://veronica.nomoredomainsmonster.ru
 
-Backend https://veronica.nomoredomainsmonster.ru
+Backend https://api.veronica.nomoredomainsmonster.ru
 
