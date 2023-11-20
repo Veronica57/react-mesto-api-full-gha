@@ -4,7 +4,6 @@ const User = require('../models/user');
 const NotFoundError = require('../errors/notfound');
 const BadRequestError = require('../errors/badrequest');
 const ConflictError = require('../errors/conflict');
-const UnauthorizedError = require('../errors/unauthorized');
 
 const { NODE_ENV, JWT_SECRET } = process.env;
 const SALT_ROUND = 10;
@@ -57,9 +56,7 @@ const login = (req, res, next) => {
       );
       res.send({ token });
     })
-    .catch(() => {
-      next(new UnauthorizedError('Неправильный email или пароль'));
-    });
+    .catch(next);
 };
 
 // get user by ID
@@ -85,14 +82,14 @@ const getUser = (req, res, next) => {
 const currentUser = (req, res, next) => {
   const userId = req.user._id;
   User.findById(userId)
-    .then((user) => res.status(200).send({ data: user }))
-    .catch((err) => {
-      if (err.name === 'CastError') {
-        next(new BadRequestError('User Not Found'));
-      } else {
-        next(err);
+    .then((user) => {
+      if (!user) {
+        next(new NotFoundError('User Not Found'));
+        return;
       }
-    });
+      res.status(200).send({ data: user });
+    })
+    .catch(next);
 };
 
 // update user

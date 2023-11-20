@@ -5,8 +5,9 @@ const ForbiddenError = require('../errors/forbidden');
 
 const createCard = (req, res, next) => {
   const { name, link } = req.body;
-  Card.create({ name, link, owner: req.user._id })
-    .then((card) => res.send(card))
+  const owner = req.user._id;
+  Card.create({ name, link, owner })
+    .then((card) => res.satus(201).send(card))
     .catch((err) => {
       if (err.name === 'ValidationError') {
         next(new BadRequestError('Incorrect data'));
@@ -19,7 +20,7 @@ const createCard = (req, res, next) => {
 const getCards = (req, res, next) => {
   Card.find({})
     .then((cards) => {
-      res.send(cards);
+      res.send(cards.reverse());
     })
     .catch(next);
 };

@@ -201,21 +201,6 @@ function App() {
             .finally(() => setIsLoading(false));
     };
 
-    // const handleCardDelete = (event) => {
-    //     event.preventDefault();
-    //     setIsLoading(true);
-    //     api.deleteCard(deletedCard._id).then(() =>
-    //         api
-    //             .getCards()
-    //             .then((dataCards) => {
-    //                 setCards(dataCards);
-    //             })
-    //             .then(() => closeAllPopups())
-    //             .catch((error) => console.error(error))
-    //             .finally(() => setIsLoading(false))
-    //     );
-    // };
-
     //edit avatar open
     const handleEditAvatarClick = () => {
         setEditAvatarPopupOpen(true);
